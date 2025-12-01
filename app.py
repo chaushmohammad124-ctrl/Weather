@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 # OpenWeatherMap API configuration
-API_KEY = "4467f6e622cedeb2dd6e208f903cad78"  # Replace with your OpenWeatherMap API key
+API_KEY = ""  # Replace with your OpenWeatherMap API key
 BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 def get_weather_icon(weather_id: int, is_day: bool = True) -> str:
@@ -126,4 +126,5 @@ def demo_animation(animation_type):
     return render_template('index.html', weather=demo_data)
 
 if __name__ == '__main__':
+
     app.run(debug=True, port=5011)
